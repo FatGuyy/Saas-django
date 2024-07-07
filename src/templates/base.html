@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>SaaS</title>
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+  </head>
+
+  <body>
+    <div class="content">{% block content %}{% endblock content %}</div>
+    <div>{% include "snippets/card.html" with name=name2 %}</div>
+    <div>{% include "snippets/card.html" with name=name %}</div>
+    <div>{% include "snippets/card.html" with name=name2 %}</div>
+    <b> Vists : </b>{{ query }} <b> Page Vists : </b>{{ page_visits }}
+  </body>
+</html>
